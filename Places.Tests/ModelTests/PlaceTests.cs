@@ -10,10 +10,10 @@ namespace Places.Tests
   {
     public void Dispose()
     {
-      Places.ClearAll();
+      Place.ClearAll();
     }
 
-    [TestMthod]
+    [TestMethod]
     public void PlaceConstructor_CreatesInstanceOfPlace_Place()
     {
       Place newPlace = new Place("test");
@@ -54,7 +54,7 @@ namespace Places.Tests
     public void GetAll_ReturnsEmptyList_PlaceList()
     {
       //Arrange
-      List<Place> newList = new List<Places> { };
+      List<Place> newList = new List<Place> { };
 
       //Act
       List<Place> result = Place.GetAll();
@@ -71,7 +71,7 @@ namespace Places.Tests
       string description02 = "Thailand";
       Place newPlace1 = new Place(description01);
       Place newPlace2 = new Place(description02);
-      List<Places> newList = new List<Place> { newPlace1, newPlace2 };
+      List<Place> newList = new List<Place> { newPlace1, newPlace2 };
 
       //Act
       List<Place> result = Place.GetAll();
